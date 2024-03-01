@@ -89,7 +89,5 @@ HEALTHCHECK --start-period=5m \
     CMD pgrep "PalServer-Linux" > /dev/null || exit 1
 
 EXPOSE ${PORT} ${RCON_PORT}
-ENTRYPOINT ["/home/steam/server/init.sh"]
-
-FROM base-${TARGETARCH} as palworld
 WORKDIR /palworld
+ENTRYPOINT ["/home/steam/server/init.sh"]
