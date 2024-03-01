@@ -35,6 +35,8 @@ if [ "$UE4SS_ENABLED" == true ]; then
         ln -s $UE4SS_MODSDIR $UE4SSDIR
     fi
     sed -E -i 's/^ConsoleEnabled = 1/ConsoleEnabled  = 0/g' $UE4SSDIR/UE4SS-settings.ini
+    sed -E -i 's/^GuiConsoleEnabled = 1/GuiConsoleEnabled = 0/g' $UE4SSDIR/UE4SS-settings.ini
+    sed -E -i 's/^GuiConsoleVisible = 1/GuiConsoleVisible = 0/g' $UE4SSDIR/UE4SS-settings.ini
     # sed -e 's/^ModsFolderPath[ ]*=[ ]*/ModsFolderPath ="\/palworld\/Mods"/g' $UE4SSDIR/default-settings.ini >$UE4SSDIR/UE4SS-settings.ini
 fi
 
