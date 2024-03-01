@@ -52,7 +52,7 @@ COPY --from=bash-linux /File/* /${UE4SSDIR}/
 #copy scripts
 COPY ./scripts /home/steam/server
 RUN chmod +x /home/steam/server/*.sh \
-    && mv /home/steam/server/restore.sh /usr/local/bin/restore \
+    # && mv /home/steam/server/restore.sh /usr/local/bin/restore \
     && apt-get update \
     && apt-get install -y gettext-base \
     && apt-get -y autoremove \
