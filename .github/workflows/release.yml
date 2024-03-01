@@ -37,6 +37,7 @@
               # generate Docker tags based on the following events/attributes
               tags: |
                 type=raw,value=palworld
+              flavor: latest=true
           - name: Docker - Build / Push
             id: docker_build
             uses: docker/build-push-action@v5
