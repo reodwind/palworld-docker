@@ -43,7 +43,7 @@
             with:
               platforms: |
                 linux/amd64
-              file: ubuntu/Dockerfile
+              file: Dockerfile
               labels: ${{ steps.meta.outputs.labels }}
               target: ${{ fromJSON(steps.meta.outputs.json).labels['org.opencontainers.image.version'] }}
               push: true
